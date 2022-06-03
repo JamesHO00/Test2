@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 10vh;
+  margin-top: 5rem;
+  background-color: #eeffff;
+}
+
+.footer__link {
+  display: inline-flex;
+  margin-right: 2rem;
+}
+
+.footer__link a {
+  text-decoration: none;
+  margin-left: 1rem;
+  color: #38b48b;
+}
+
+.footer__link a:hover {
+  color: #1a5844;
+}
+
+.footer p {
+  align-self: center;
+}

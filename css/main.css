@@ -1,0 +1,214 @@
+.main__video-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__video-container h2 {
+  background-color: #eeffff;
+  padding: 2rem 0;
+  border-left: 20px solid #324cac;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main__video-container iframe {
+  align-self: center;
+  padding: 20px;
+}
+
+.main__items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__items-container h2 {
+  background-color: #eeffff;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+  border-left: 20px solid #324cac;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main__items-sliders {
+  align-self: center;
+  position: relative;
+  width: 1024px;
+  height: 1024px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: aquamarine;
+  overflow: hidden;
+}
+
+.main__items-slider {
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  transition: 0.5s transform ease-in;
+}
+
+.main__items-slider:nth-of-type(1) {
+  background-color: bisque;
+}
+.main__items-slider:nth-of-type(2) {
+  background-color: rgb(207, 168, 121);
+  left: 100%;
+}
+.main__items-slider:nth-of-type(3) {
+  background-color: rgb(71, 50, 23);
+  left: 200%;
+}
+.main__items-slider:nth-of-type(4) {
+  background-color: rgb(110, 63, 6);
+  left: 300%;
+}
+
+input[type='radio'] {
+  z-index: 100;
+  position: relative;
+  display: none;
+}
+
+.main__items-controls {
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+  text-align: center;
+}
+
+.main__items-controls label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #38b48b6b;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+.main__items-sliders
+  input[type='radio']:nth-of-type(1):checked
+  ~ .main__items-controls
+  label:nth-of-type(1) {
+  background-color: #38b48b;
+}
+.main__items-sliders
+  input[type='radio']:nth-of-type(2):checked
+  ~ .main__items-controls
+  label:nth-of-type(2) {
+  background-color: #38b48b;
+}
+.main__items-sliders
+  input[type='radio']:nth-of-type(3):checked
+  ~ .main__items-controls
+  label:nth-of-type(3) {
+  background-color: #38b48b;
+}
+.main__items-sliders
+  input[type='radio']:nth-of-type(4):checked
+  ~ .main__items-controls
+  label:nth-of-type(4) {
+  background-color: #38b48b;
+}
+
+.main__items-sliders
+  input[type='radio']:nth-of-type(1):checked
+  ~ .main__items-slider {
+  transform: translateX(0%);
+}
+
+.main__items-sliders
+  input[type='radio']:nth-of-type(2):checked
+  ~ .main__items-slider {
+  transform: translateX(-100%);
+}
+.main__items-sliders
+  input[type='radio']:nth-of-type(3):checked
+  ~ .main__items-slider {
+  transform: translateX(-200%);
+}
+.main__items-sliders
+  input[type='radio']:nth-of-type(4):checked
+  ~ .main__items-slider {
+  transform: translateX(-300%);
+}
+
+.main__select-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 1rem 10% 0;
+}
+
+.main__select-container aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+  min-width: 350px;
+  height: 400px;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.main__select-container h3 {
+  padding: 10px 0;
+  background-color: #abb3b3c6;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.main__select-container li {
+  padding: 5px;
+}
+
+.main__select-money {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+.main__select-container button {
+  position: absolute;
+  width: 60%;
+  margin: 0 20%;
+  bottom: 1rem;
+  border: none;
+  padding: 1rem 5rem;
+  background-color: #324cac;
+  color: #eeffff;
+}
+
+.main__select-container button:hover {
+  background-color: #213372;
+}
+
+@media (max-width: 800px) {
+  .main__select-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1rem 10% 0;
+  }
+  .main__items-sliders {
+    width: 600px;
+    height: 600px;
+  }
+  .main__items-sliders img {
+    width: 600px;
+    height: 600px;
+  }
+  iframe {
+    width: 600px;
+    height: 400px;
+  }
+}
